@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".ui.auth.register.RegisterActivity">
+
+    <ProgressBar
+        android:visibility="invisible"
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textColor="#FF0000"
+        android:visibility="gone"
+        android:id="@+id/register_text_phone"
+        android:textSize="16sp"
+        android:text="raqamni kiriting"
+        android:layout_gravity="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:background="@drawable/edit_text_back"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/login_phone_text"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:text="+998"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"/>
+
+        <com.santalu.maskara.widget.MaskEditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="3dp"
+            android:background="@color/white"
+            android:hint="telefon raqamni kiriting"
+            android:inputType="phone"
+            android:padding="5dp"
+            app:mask="(__)-___-__-__" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:visibility="gone"
+        android:textColor="#FF0000"
+        android:id="@+id/register_text_password"
+        android:textSize="16sp"
+        android:text="parolni kiriting"
+        android:layout_gravity="start"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:padding="5dp"
+        android:hint="parolni kiriting"
+        android:background="@drawable/edit_text_back"
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:visibility="gone"
+        android:textColor="#FF0000"
+        android:id="@+id/register_text_password2"
+        android:textSize="16sp"
+        android:text="parolni kiriting"
+        android:layout_gravity="start"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:hint="parolni qayta kiriting"
+        android:padding="5dp"
+        android:background="@drawable/edit_text_back"
+        android:id="@+id/password2"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:text="OK"
+        android:id="@+id/button_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+
+</LinearLayout>

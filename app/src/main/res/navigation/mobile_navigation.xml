@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="uz.pixyz.rentcar.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_choseCarFragment"
+            app:destination="@id/choseCarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/choseCarFragment"
+        android:name="uz.pixyz.rentcar.ui.chosecar.ChoseCarFragment"
+        android:label="fragment_chose_car"
+        tools:layout="@layout/fragment_chose_car" >
+        <action
+            android:id="@+id/action_choseCarFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+        <action
+            android:id="@+id/action_choseCarFragment_to_detalisFragment"
+            app:destination="@id/detalisFragment" />
+        <action
+            android:id="@+id/action_choseCarFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_choseCarFragment_to_orderFragment"
+            app:destination="@id/orderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalisFragment"
+        android:name="uz.pixyz.rentcar.ui.DetailsFragment"
+        android:label="fragment_detalis"
+        tools:layout="@layout/fragment_detalis" >
+        <action
+            android:id="@+id/action_detalisFragment_to_orderFragment"
+            app:destination="@id/orderFragment" />
+        <action
+            android:id="@+id/action_detalisFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="uz.pixyz.rentcar.ui.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" >
+        <action
+            app:popUpTo="@id/choseCarFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_filterFragment_to_choseCarFragment"
+            app:destination="@id/choseCarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="uz.pixyz.rentcar.ui.auth.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_orderFragment2"
+            app:destination="@id/orderFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/loginFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="uz.pixyz.rentcar.ui.order.OrderFragment"
+        android:label="fragment_order"
+        tools:layout="@layout/fragment_order" />
+</navigation>
